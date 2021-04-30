@@ -29,12 +29,10 @@ public class App {
 		 * Plumbus
 		 */
 
-		/**
-		 * eyeDes = BreakfastMaker.prepareEyeholes();
-		 * BreakfastMaker.incluirJuguete(eyeDes);
-		 * System.out.println("\nEyeholes con plumbus!");
-		 * eyeDes.showProduct();
-		 * System.out.print("Precio pedido: " + eyeDes.getCost());
-		*/
+		eyeDes = BreakfastMaker.prepareEyeholes();
+		BreakfastMaker.addToy(eyeDes);
+		System.out.println("\nEyeholes con plumbus!");
+		eyeDes.showProduct();
+		System.out.print("Precio pedido: " + eyeDes.getCost());
 	}
 }
