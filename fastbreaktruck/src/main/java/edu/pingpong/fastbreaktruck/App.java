@@ -1,5 +1,8 @@
 package edu.pingpong.fastbreaktruck;
 
+import edu.pingpong.fastbreaktruck.breakfast.Breakfast;
+import edu.pingpong.fastbreaktruck.breakfast.BreakfastMaker;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -8,28 +11,30 @@ public class App {
 		 * Desayuno Eyeholes
 		 */
 
-		Desayuno eyeDes = FastBreakTruck.prepararEyeHoles();
+		Breakfast eyeDes = BreakfastMaker.prepareEyeholes();
 		System.out.println("\nNo abras la caja de Eyeholes!");
-		eyeDes.mostrarItems();
-		System.out.print("Precio pedido: " + eyeDes.getCoste());
+		eyeDes.showProduct();
+		System.out.print("Precio pedido: " + eyeDes.getCost());
 
 		/**
 		 * Desayuno Smiggles
 		 */
 
-		Desayuno smigDes = FastBreakTruck.prepararSmiggles();
+		Breakfast smigDes = BreakfastMaker.prepareSmiggles();
 		System.out.println("\nSmiggles per als nins!");
-		smigDes.mostrarItems();
-		System.out.print("Precio pedido: " + smigDes.getCoste());
+		smigDes.showProduct();
+		System.out.print("Precio pedido: " + smigDes.getCost());
 
 		/**
 		 * Plumbus
 		 */
 
-		eyeDes = FastBreakTruck.prepararEyeHoles();
-		FastBreakTruck.incluirJuguete(eyeDes);
-		System.out.println("\nEyeholes con plumbus!");
-		eyeDes.mostrarItems();
-		System.out.print("Precio pedido: " + eyeDes.getCoste());
+		/**
+		 * eyeDes = BreakfastMaker.prepareEyeholes();
+		 * BreakfastMaker.incluirJuguete(eyeDes);
+		 * System.out.println("\nEyeholes con plumbus!");
+		 * eyeDes.showProduct();
+		 * System.out.print("Precio pedido: " + eyeDes.getCost());
+		*/
 	}
 }
